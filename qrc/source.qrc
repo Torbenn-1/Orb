@@ -1,0 +1,38 @@
+<RCC>
+  <qresource prefix="iconteste">
+    <file>icons/bill.png</file>
+    <file>icons/calculator.png</file>
+    <file>icons/arrow-black.png</file>
+    <file>icons/arrow-white.png</file>
+    <file>icons/loupe (1).png</file>
+    <file>icons/loupe.png</file>
+    <file>icons/user-g.png</file>
+    <file>icons/invoice.png</file>
+    <file>icons/cart.png</file>
+    <file>icons/clipboard.png</file>
+    <file>icons/printer.png</file>
+    <file>icons/send-file-icon-18-256.png</file>
+    <file>icons/down-arrow.png</file>
+    <file>icons/truck.png</file>
+    <file>icons/phone.png</file>
+    <file>icons/box.png</file>
+    <file>icons/graph.png</file>
+    <file>icons/group.png</file>
+    <file>icons/store.png</file>
+    <file>icons/user.png</file>
+    <file>icons/right white arrow.png</file>
+    <file>icons/plus-solid.svg</file>
+    <file>icons/ba812f4a-b112-4fa5-96d0-dccd574e3a86.jpg</file>
+    <file>icons/bc618214-251e-4c1c-9617-52f5a49d45b0.jpg</file>
+    <file>icons/arrow-left-solid.svg</file>
+    <file>icons/plus-xxl.png</file>
+    <file>icons/plus-solid.svg</file>
+    <file>icons/ativo.jpg</file>
+    <file>icons/Ativo 16@2x.png</file>
+    <file>icons/404.png</file>
+    <file>icons/icon.png</file>
+    <file>icons/right-arrow.png</file>
+    <file>icons/truck.png</file>
+    <file>icons/user.png</file>
+  </qresource>
+</RCC>
