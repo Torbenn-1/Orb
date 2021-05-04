@@ -1,7 +1,7 @@
 import sqlite3
 from PyQt5 import QtCore, QtGui, QtWidgets
 from bug_report import Ui_bug_report
-from PyQt5.QtWidgets import QMessageBox
+from qmessage import Qmessage
 from cadastro import Ui_cadastro
 
 
@@ -36,14 +36,8 @@ class Ui_MainWindow(object):
             # dedicar esse espaço a chamada de tela
             print("foi")
         else:
-            def warning(self):
-                msg = QMessageBox()
-                msg.setIcon(QMessageBox.Critical)
-                msg.setText(":(")
-                msg.setInformativeText('Credêciais incorretas, caso você não tenha um cadastro contate um administrador e ele fará seu cadastro')
-                msg.setWindowTitle("Ops")
-                msg.exec_()
-            warning(self)
+
+            Qmessage.warning(self)
             print("foi não")
 
 

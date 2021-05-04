@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 
-
-from PyQt5.QtWidgets import QMessageBox
 from login import Ui_MainWindow
 from bug_report import Ui_bug_report
 
@@ -16,7 +14,6 @@ class Ui_Form(object):
         self.ui = Ui_bug_report()
         self.ui.setupUi(self.bug_report)
         self.bug_report.show()
-a
 
 
     def login(self):

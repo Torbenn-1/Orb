@@ -1,18 +1,24 @@
+# -*- coding: utf-8 -*-
+
 import sqlite3
 from bug_report import Ui_bug_report
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QMessageBox
+from qmessage import Qmessage
 from login import Ui_MainWindow
 
 
 
+
+
 class Ui_Form(object):
+    def fecha(self):
+        pass
     def ret_login(self):
         self.login = QtWidgets.QMainWindow()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self.login)
         self.login.show()
-
+        self.fecha()
     def bug_report_call(self):
         self.bug_report = QtWidgets.QWidget()
         self.ui = Ui_bug_report()
@@ -33,16 +39,8 @@ class Ui_Form(object):
 
         if (cname == '' or rua == '' or cell == '' or bairro == '' or cidade == ''):
 
-            def warning(self):
-                msg = QMessageBox()
-                msg.setIcon(QMessageBox.Critical)
-                msg.setText(":(")
-                msg.setWindowIcon(QtGui.QIcon(':/iconteste/icons/Ativo 16@2x.png'))
-                msg.setInformativeText('Opa, Parece que você esqueceu de completar algum campo, verifique e tente de novo.')
-                msg.setWindowTitle("Ops")
-                msg.exec_()
 
-            warning(self)
+            Qmessage.warning(self)
         else:
             conn = sqlite3.connect("clientel.db")
             cursor = conn.cursor()
@@ -75,16 +73,8 @@ class Ui_Form(object):
 
 
 
-            def great(self):
-                msg = QMessageBox()
-                msg.setIcon(QMessageBox.Information)
-                msg.setWindowIcon(QtGui.QIcon(':/iconteste/icons/Ativo 16@2x.png'))
 
-                msg.setText(":)")
-                msg.setInformativeText('Seu Cadastro foi efetuado com sucesso, agora é só retornar para a tela de Login e já pode usar o Orb a vontande.')
-                msg.setWindowTitle("Sucesso")
-                msg.exec_()
-            great(self)
+            Qmessage.great(self)
             pass
 
     def setupUi(self, Form):

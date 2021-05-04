@@ -1,8 +1,8 @@
+# -*- coding: utf-8 -*-
 
-
+from qmessage import Qmessage
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sqlite3
-from PyQt5.QtWidgets import QMessageBox
 
 class Ui_bug_report(object):
     def send(self):
@@ -16,27 +16,13 @@ class Ui_bug_report(object):
 
         if (len(cursor.fetchall()) > 0):
             # dedicar esse espaço a chamada de tela
-            def great(self):
-                msg = QMessageBox()
-                msg.setIcon(QMessageBox.Information)
-                msg.setWindowIcon(QtGui.QIcon(':/iconteste/icons/Ativo 16@2x.png'))
 
-                msg.setText(":)")
-                msg.setInformativeText('Seu report foi enviado com sucesso, Já vamos colocar nossos programadores para consertar esse defeito. Pode fechar essa tela e usar o sistema, assim que o erro for corrigido avisaremos.')
-                msg.setWindowTitle("Enviado")
-                msg.exec_()
-            great(self)
+            Qmessage.report_sent(self)
             pass
             print("foi")
         else:
-            def warning(self):
-                msg = QMessageBox()
-                msg.setIcon(QMessageBox.Critical)
-                msg.setText(":(")
-                msg.setInformativeText('Credêciais incorretas, caso você não tenha um cadastro contate um administrador e ele fará seu cadastro')
-                msg.setWindowTitle("Ops")
-                msg.exec_()
-            warning(self)
+
+            Qmessage.warning(self)
             print("foi não")
             pass
 

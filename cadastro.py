@@ -1,7 +1,9 @@
+# -*- coding: utf-8 -*-
+
 import sqlite3
 from PyQt5 import QtCore, QtGui, QtWidgets
 from bug_report import Ui_bug_report
-from PyQt5.QtWidgets import QMessageBox
+from qmessage import Qmessage
 
 class Ui_cadastro(object):
 
@@ -20,17 +22,9 @@ class Ui_cadastro(object):
         senha = self.lineEdit_2.text()
         if (username == '' or email == '' or senha == ''):
 
-            def warning(self):
-                msg = QMessageBox()
-                msg.setIcon(QMessageBox.Critical)
-                msg.setText(":(")
-                msg.setWindowIcon(QtGui.QIcon(':/iconteste/icons/Ativo 16@2x.png'))
 
-                msg.setInformativeText('Opa, Parece que você esqueceu de completar algum campo, verifique e tente de novo.')
-                msg.setWindowTitle("Ops")
-                msg.exec_()
 
-            warning(self)
+            Qmessage.warning2(self)
         else:
             conn = sqlite3.connect("login.db")
             cursor = conn.cursor()
@@ -50,16 +44,8 @@ class Ui_cadastro(object):
             self.lineEdit.clear()
             self.lineEdit_2.clear()
             self.lineEdit_3.clear()
-            def great(self):
-                msg = QMessageBox()
-                msg.setIcon(QMessageBox.Information)
-                msg.setWindowIcon(QtGui.QIcon(':/iconteste/icons/Ativo 16@2x.png'))
 
-                msg.setText(":)")
-                msg.setInformativeText('Seu Cadastro foi efetuado com sucesso, agora é só retornar para a tela de Login e já pode usar o Orb a vontande.')
-                msg.setWindowTitle("Sucesso")
-                msg.exec_()
-            great(self)
+            Qmessage.great(self)
             pass
 
 
