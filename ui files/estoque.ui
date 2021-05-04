@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1044</width>
-    <height>500</height>
+    <width>1248</width>
+    <height>803</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -247,7 +247,7 @@ background-color:625f66
                 </size>
                </property>
                <property name="text">
-                <string>          andrade esquadrias id user #0001</string>
+                <string>          Meemo user id user #0001</string>
                </property>
               </widget>
              </item>
